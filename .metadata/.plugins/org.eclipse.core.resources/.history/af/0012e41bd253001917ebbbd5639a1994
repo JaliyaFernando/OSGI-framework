@@ -1,0 +1,7 @@
+package com.vehicleperformanceupgrade;
+
+public abstract class Performance {
+
+	abstract double getPrice(String type);
+	abstract String displayDetails(String type);
+}

@@ -1,0 +1,11 @@
+package com.vehicleinteriorupgrade;
+
+public abstract class Seats {
+
+	@Override
+	abstractdouble getPrice(String type);
+
+	@Override
+	abstract String displayDetails(String type);
+
+}

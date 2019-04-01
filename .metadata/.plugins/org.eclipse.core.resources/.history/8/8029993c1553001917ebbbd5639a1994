@@ -1,0 +1,15 @@
+package com.vehicleinteriorupgrade;
+
+public abstract class Interior {
+	public void displyInteriorUpgradeDetails() {
+		System.out.println("     ***** Select Your Body Kit and Accessories *****     ");
+		System.out.println("------------------------------------------");
+		System.out.println("         Upgrade Type 1 - Upgrade body kit");
+		System.out.println("         Upgrade Type 2 - Carbon rear wing");
+		System.out.println("         Upgrade Type 3 - Titanium Exaust pipes");
+		System.out.println("------------------------------------------");
+	} 
+	
+	abstract double getPrice(String type);
+	abstract String displayDetails(String type);
+}

@@ -1,0 +1,309 @@
+package com.vehicleinteriorupgrade;
+
+import java.util.Scanner;
+
+public class InteriorHandlerImpl implements InteriorHandlerInter {
+	
+	int mainColor_count = 0;
+	int secondaryColor_count = 0;
+	int specialTrim_count = 0;
+	int floormats_count = 0;
+	int steeringWheel_count = 0;
+	int seats_count = 0;
+	
+	String Details="";
+	Scanner input = new Scanner(System.in); 
+
+	
+	@Override
+	public void displyInteriorUpgradeDetails() {
+		System.out.println("                    ***** Select Your Interior Upgrade *****     ");
+		System.out.println("------------------------------------------------------------------------------");
+		System.out.print("         Upgrade Type 1 - MAIN COLOR");
+		if(mainColor_count == 1) {System.out.print("       You already upgrade");}
+		System.out.print("\n         Upgrade Type 2 - SECONDARY COLOR");
+		if(secondaryColor_count == 1) {System.out.print("       You already upgrade");}
+		System.out.print("\n         Upgrade Type 3 - SPECIAL TRIM");
+		if(specialTrim_count == 1) {System.out.print("       You already upgrade");}
+		System.out.print("\n         Upgrade Type 4 - FLOORMATS");
+		if(floormats_count == 1) {System.out.print("       You already upgrade");}
+		System.out.print("\n         Upgrade Type 5 - STEERING WHEEL");
+		if(steeringWheel_count == 1) {System.out.print("       You already upgrade");}
+		System.out.print("\n         Upgrade Type 6 - SEATS");
+		if(seats_count == 1) {System.out.print("       You already upgrade");}
+		System.out.println("\n------------------------------------------------------------------------------");
+	}
+	
+	
+	
+	MainColor na = new NeroAde();
+	MainColor al = new ArancioLeonis();
+	MainColor bl = new BluAmon();
+	MainColor ro = new RossaAlala();
+	@Override
+	public double displyMainColorUpgrades(String type) {
+		System.out.println("     ***** Select Your Interior Main Color Upgrade *****     ");
+		System.out.println("------------------------------------------");
+		
+		System.out.print("         Upgrade Type 1 - "+na.displayDetails(type));
+		System.out.print("\n         Upgrade Type 2 - "+al.displayDetails(type));
+		System.out.print("\n         Upgrade Type 3 - "+bl.displayDetails(type));
+		System.out.print("\n         Upgrade Type 4 - "+ro.displayDetails(type));
+		System.out.println("\n------------------------------------------");
+		
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+
+		mainColor_count++;
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				Details = Details+"\n"+na.displayDetails(type);
+				return na.getPrice(type);
+			}else if(a == 2){
+				Details = Details+"\n"+al.displayDetails(type);
+				return al.getPrice(type);
+			}else if(a == 3){
+				Details = Details+"\n"+bl.displayDetails(type);
+				return bl.getPrice(type);
+			}else if(a == 4){
+				Details = Details+"\n"+ro.displayDetails(type);
+				return ro.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		return 00.00;
+
+	}
+
+	
+	SecondaryColor na_sec = new NeroAdeSec();
+	SecondaryColor al_sec = new ArancioLeonisSec();
+	SecondaryColor bl_sec = new BluAmonSec();
+	SecondaryColor ro_sec = new RossaAlalaSec();
+	@Override
+	public double displySecondaryColorUpgrades(String type) {
+		System.out.println("                          ***** Select Your Interior Secondary Color Upgrade *****     ");
+		System.out.println("---------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.print("         Upgrade Type 1 -"+na_sec.displayDetails(type));
+		System.out.print("\n         Upgrade Type 2 -"+al_sec.displayDetails(type));
+		System.out.print("\n         Upgrade Type 3 -"+bl_sec.displayDetails(type));
+		System.out.print("\n         Upgrade Type 4 -"+ro_sec.displayDetails(type));
+		System.out.println("\n---------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+		
+		secondaryColor_count++;
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				Details = Details+"\n"+na_sec.displayDetails(type);
+				return na_sec.getPrice(type);
+			}else if(a == 2){
+				Details = Details+"\n"+al_sec.displayDetails(type);
+				return al_sec.getPrice(type);
+			}else if(a == 3){
+				Details = Details+"\n"+bl_sec.displayDetails(type);
+				return bl_sec.getPrice(type);
+			}else if(a == 4){
+				Details = Details+"\n"+ro_sec.displayDetails(type);
+				return ro_sec.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		return 00.00;
+
+	}
+
+	
+	SpecialTrim sp = new SportivoAlcantara();
+	SpecialTrim cs = new CarbonSkinPackage();
+	SpecialTrim ac = new Alcantara();
+	SpecialTrim el = new EleganteLeather();
+	@Override
+	public double displySpecialTrimUpgrades(String type) {
+		System.out.println("     ***** Select Your Interior Special Trim Upgrade *****     ");
+		System.out.println("------------------------------------------");
+		
+		System.out.print("         Upgrade Type 1 -"+sp.displayDetails(type));
+		System.out.print("\n         Upgrade Type 2 -"+cs.displayDetails(type));
+		System.out.print("\n         Upgrade Type 3 -"+ac.displayDetails(type));
+		System.out.print("\n         Upgrade Type 4 - "+el.displayDetails(type));
+		System.out.println("\n------------------------------------------");
+
+		
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+		
+		specialTrim_count++;
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				Details = Details+"\n"+sp.displayDetails(type);
+				return sp.getPrice(type);
+			}else if(a == 2){
+				Details = Details+"\n"+cs.displayDetails(type);
+				return cs.getPrice(type);
+			}else if(a == 3){
+				Details = Details+"\n"+ac.displayDetails(type);
+				return ac.getPrice(type);
+			}else if(a == 4){
+				Details = Details+"\n"+el.displayDetails(type);
+				return el.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		return 00.00;
+
+	}
+
+	Floormats ca_fm = new CarbonFiberFootPlate();
+	Floormats al_fm = new AlcantaraFloormats();
+	Floormats le_fm = new LeatherFloormats();
+	@Override
+	public double displyFloormatsUpgrades(String type) {
+		System.out.println("     ***** Select Your Interior Floormats Upgrade *****     ");
+		System.out.println("------------------------------------------");
+		
+		
+		System.out.print("         Upgrade Type 1 -"+ca_fm.displayDetails(type));
+		System.out.print("\n         Upgrade Type 2 -"+al_fm.displayDetails(type));
+		System.out.print("\n         Upgrade Type 3 -"+le_fm.displayDetails(type));
+		 
+		System.out.println("\n------------------------------------------");
+
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+		
+		floormats_count++;
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				Details = Details+"\n"+ca_fm.displayDetails(type);
+				return ca_fm.getPrice(type);
+			}else if(a == 2){
+				Details = Details+"\n"+al_fm.displayDetails(type);
+				return al_fm.getPrice(type);
+			}else if(a == 3){
+				Details = Details+"\n"+le_fm.displayDetails(type);
+				return le_fm.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		return 00.00;
+	}
+
+	SteeringWheel mf_alle_sw = new MultifunctionAlacantaraLeather();
+	SteeringWheel mf_al_sw = new MultifunctionAlacantara();
+	SteeringWheel alle_sw = new AlcantaraLeatherSteering();
+	SteeringWheel al_sw = new AlacantaraSteering();
+	@Override
+	public double displySteeringWheelUpgrades(String type) {
+		System.out.println("     ***** Select Your Interior SteeringWheel Upgrade *****     ");
+		System.out.println("------------------------------------------");
+		
+		
+		System.out.print("         Upgrade Type 1 -"+mf_alle_sw.displayDetails(type));
+		System.out.print("\n         Upgrade Type 2 -"+mf_al_sw.displayDetails(type));
+		System.out.print("\n         Upgrade Type 3 -"+alle_sw.displayDetails(type));
+		System.out.print("\n         Upgrade Type 4 - "+al_sw.displayDetails(type));
+		 
+		System.out.println("\n------------------------------------------");
+		
+
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+		
+		steeringWheel_count++;
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				Details = Details+"\n"+mf_alle_sw.displayDetails(type);
+				return mf_alle_sw.getPrice(type);
+			}else if(a == 2){
+				Details = Details+"\n"+mf_al_sw.displayDetails(type);
+				return mf_al_sw.getPrice(type);
+			}else if(a == 3){
+				Details = Details+"\n"+alle_sw.displayDetails(type);
+				return alle_sw.getPrice(type);
+			}else if(a == 4){
+				Details = Details+"\n"+al_sw.displayDetails(type);
+				return al_sw.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		return 00.00;
+
+	}
+
+	
+	Seats el_heat_seats = new FullyElectricalHeatedComfortSetats();
+	Seats el_seats = new FullyElectricalSeats();
+	@Override
+	public double displySeatsUpgrades(String type) {
+		System.out.println("     ***** Select Your Interior Seats Upgrade *****     ");
+		System.out.println("------------------------------------------");
+		
+		System.out.print("         Upgrade Type 1 -"+el_heat_seats.displayDetails(type));
+		System.out.print("\n         Upgrade Type 2 -"+el_seats.displayDetails(type));
+		
+		System.out.println("\n------------------------------------------");
+			
+
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+		
+		seats_count++;
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				Details = Details+"\n"+el_heat_seats.displayDetails(type);
+				return el_heat_seats.getPrice(type);
+			}else if(a == 2){
+				Details = Details+"\n"+el_seats.displayDetails(type);
+				return el_seats.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		return 00.00;
+
+	}
+
+	@Override
+	public String getDetails() {
+		return Details;
+	}
+
+}

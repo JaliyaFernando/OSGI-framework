@@ -1,0 +1,32 @@
+package com.vehicleinteriorupgrade;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
+
+import com.vehiclebodyupgrade.BodyKitHandleInterface;
+import com.vehiclebodyupgrade.BodyKitHandleInterfaceImpl;
+
+public class InteriorActivator implements BundleActivator {
+
+	ServiceRegistration interiorUpgradeServiceRegistration;
+	
+	@Override
+	public void start(BundleContext context) throws Exception {
+		System.out.println("Start Body Upgrade Service");
+	//	ServicePublish publisherService =new ServicePublishImpl();
+		InteriorHandlerInter interior = new InteriorHandlerImpl();
+	
+
+		interiorUpgradeServiceRegistration = context.registerService(InteriorHandlerInter.class.getName(),interior , null);
+		
+	}
+
+	public void stop(BundleContext context) throws Exception {
+		
+		bodyUpgradeServiceRegistration.unregister();
+		System.out.println("Stoped Body Upgrade Service");
+	}
+
+	
+}

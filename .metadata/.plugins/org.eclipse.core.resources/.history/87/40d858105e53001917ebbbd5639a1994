@@ -1,0 +1,9 @@
+package com.vehicleinteriorupgrade;
+
+public interface InteriorHandlerInter {
+	void displyBodyKitDetails();
+	double displayUpgradeBodyKit(String type);
+	public double displayWingUpgrade(String carType);
+	public double displayExhaustUpgrade(String type);
+	public String getDetails();
+}

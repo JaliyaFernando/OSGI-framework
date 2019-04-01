@@ -1,0 +1,5 @@
+package com.vehicleperformanceupgrade;
+
+public class V3InoxLineCoilover extends Suspensions {
+
+}

@@ -1,0 +1,7 @@
+package com.vehicleperformanceupgrade;
+
+public abstract class Brakes{
+	double getPrice(String type);
+	String displayDetails(String type);
+
+}

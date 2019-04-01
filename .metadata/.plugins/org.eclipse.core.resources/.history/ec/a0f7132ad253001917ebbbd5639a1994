@@ -1,0 +1,12 @@
+package com.vehicleperformanceupgrade;
+
+public abstract class Brakes{
+
+	@Override
+	double getPrice(String type);
+	String displayDetails(String type) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

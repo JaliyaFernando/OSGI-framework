@@ -1,0 +1,24 @@
+package com.vehicleinteriorupgrade;
+
+public interface InteriorHandlerInter {
+	void displyMainColorUpgrades();
+	void displySecondaryColorUpgrades(type);
+	void displySpecialTrimUpgrades(type);
+	void displyFloormatsUpgrades(type);
+	void displySteeringWheelUpgrades(type);
+	void displySeatsUpgrades(type);
+	/*
+	 * void displySeatBeltsUpgrades(); void displyEquipmentsUpgrades();
+	 */
+
+	
+	/*
+	 * double displayUpgradeBodyKit(String type); public double
+	 * displayWingUpgrade(String carType); public double
+	 * displayExhaustUpgrade(String type);
+	 */
+	
+	
+	public String getDetails();
+	void displyInteriorUpgradeDetails();
+}

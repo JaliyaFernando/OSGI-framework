@@ -1,0 +1,5 @@
+package com.vehicleinteriorupgrade;
+
+public class EleganteLeather extends SpecialTrim {
+
+}

@@ -1,0 +1,12 @@
+package com.vehicleperformanceupgrade;
+
+public abstract class FuelInjectors {
+
+	@Override
+	double getPrice(String type);
+	String displayDetails(String type) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

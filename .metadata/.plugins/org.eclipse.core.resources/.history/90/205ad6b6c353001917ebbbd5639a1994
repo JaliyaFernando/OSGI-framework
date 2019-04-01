@@ -1,0 +1,8 @@
+package com.vehicleinteriorupgrade;
+
+public abstract class MainColor {
+
+	double getPrice(String type);
+	String displayDetails(String type);
+
+}

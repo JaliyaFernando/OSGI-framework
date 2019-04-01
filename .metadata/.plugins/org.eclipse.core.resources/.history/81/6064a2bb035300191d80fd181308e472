@@ -1,0 +1,7 @@
+package com.vehiclebodyupgrade;
+
+public interface BodyKitHandleInterface {
+	void displyBodyKitDetails();
+	double displayUpgradeBodyKit(String type);
+	public double displayWingUpgrade(carType);
+}

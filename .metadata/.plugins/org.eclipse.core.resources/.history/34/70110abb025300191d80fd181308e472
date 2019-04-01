@@ -1,0 +1,86 @@
+package com.vehiclebodyupgrade;
+
+import java.util.Scanner;
+
+public class BodyKitHandleInterfaceImpl implements BodyKitHandleInterface{
+	BodyKit  wb = new WideBodyKit(); 
+	BodyKit  rb= new RacingBodyKit();
+	int bodyKit_count = 0;
+	int wing_count = 0;
+	int exaust_count = 0;
+	public void displyBodyKitDetails() {
+		System.out.println("     ***** Select Your Body Kit and Accessories *****     ");
+		System.out.println("------------------------------------------");
+		
+		System.out.print("\n         Upgrade Type 1 - Upgrade body kit");
+		if(bodyKit_count == 1) {System.out.print("  You already upgrade");}
+		System.out.print("\n         Upgrade Type 2 - Carbon rear wing");
+		if(wing_count == 1) {System.out.print("  You already upgrade");}
+		System.out.print("\n         Upgrade Type 3 - Titanium Exaust pipes");
+		if(exaust_count == 1) {System.out.print("  You already upgrade");}
+		System.out.println("\n------------------------------------------");
+	} 
+	
+	public double displayUpgradeBodyKit(String type) {
+		bodyKit_count++;
+		Scanner input = new Scanner(System.in); 
+		System.out.println("     ***** Select Your Body Kit and Accessories *****     ");
+		System.out.println("------------------------------------------");
+		System.out.println(wb.displayDetails(type));
+		System.out.println(rb.displayDetails(type));
+		System.out.println("------------------------------------------");
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				return wb.getPrice(type);
+			}else if(a == 2){
+				return rb.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		
+		return 00.00;
+		
+		
+	}
+	
+	public double selectWingAndExhauste(String type) {
+		wing_count++;
+		Scanner input = new Scanner(System.in); 
+		System.out.println("     ***** Select Your Body Kit and Accessories *****     ");
+		System.out.println("------------------------------------------");
+		System.out.println(wb.displayDetails(type));
+		System.out.println(rb.displayDetails(type));
+		System.out.println("------------------------------------------");
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				return wb.getPrice(type);
+			}else if(a == 2){
+				return rb.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		
+		return 00.00;
+	}
+	
+	
+	
+	
+	
+}

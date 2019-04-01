@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=VehicleInteriorUpgrade/C:\/Program Files\/Java\/jdk-11.0.2\/lib\/jrt-fs.jar`java.desktop&lt;java.awt(TexturePaintContext$Int.class[Int" modifiers="8" timestamp="1552728421187"/>
+<typeInfo handle="=VehicleInteriorUpgrade/src&lt;com.vehicleinteriorupgrade{InteriorHandlerInter.java[InteriorHandlerInter" modifiers="513" timestamp="1554005558357"/>
+<typeInfo handle="=VehiclePerformanceUpgrade/src&lt;com.vehicleperformanceupgrade{PerformanceHandlerInter.java[PerformanceHandlerInter" modifiers="513" timestamp="1554013128349"/>
+<typeInfo handle="=VehiclePerformanceUpgrade/C:\/Program Files\/Java\/jdk-11.0.2\/lib\/jrt-fs.jar`java.base&lt;jdk.internal.perf(Perf.class[Perf" modifiers="49" timestamp="1552728421187"/>
+<typeInfo handle="=VehiclePerformanceUpgrade/C:\/Program Files\/Java\/jdk-11.0.2\/lib\/jrt-fs.jar`java.base&lt;sun.text.bidi(BidiBase$BracketData.class[BracketData" modifiers="8" timestamp="1552728421187"/>
+<typeInfo handle="=VehicleInteriorUpgrade/src&lt;com.vehicleinteriorupgrade{Seats.java[Seats" modifiers="1025" timestamp="1554043503980"/>
+<typeInfo handle="=VehicleInteriorUpgrade/src&lt;com.vehicleinteriorupgrade{MainColor.java[MainColor" modifiers="1025" timestamp="1554043566280"/>
+<typeInfo handle="=VehicleInteriorUpgrade/src&lt;com.vehicleinteriorupgrade{SpecialTrim.java[SpecialTrim" modifiers="1025" timestamp="1554043686600"/>
+<typeInfo handle="=VehiclePerformanceUpgrade/src&lt;com.vehicleperformanceupgrade{Brakes.java[Brakes" modifiers="1025" timestamp="1554049781822"/>
+<typeInfo handle="=VehiclePerformanceUpgrade/src&lt;com.vehicleperformanceupgrade{Exhausts.java[Exhausts" modifiers="1025" timestamp="1554049861040"/>
+<typeInfo handle="=VehiclePerformanceUpgrade/src&lt;com.vehicleperformanceupgrade{Suspensions.java[Suspensions" modifiers="1025" timestamp="1554049887401"/>
+<typeInfo handle="=VehiclePerformanceUpgrade/src&lt;com.vehicleperformanceupgrade{FuelInjectors.java[FuelInjectors" modifiers="1025" timestamp="1554049923457"/>
+</typeInfoHistroy>

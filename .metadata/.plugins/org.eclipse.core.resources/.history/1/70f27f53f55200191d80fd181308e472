@@ -1,0 +1,6 @@
+package com.vehiclebodyupgrade;
+
+public interface BodyKitHandleInterface {
+	void displyBodyKitDetails();
+	displayUpgradeBodyKit(String type);
+}

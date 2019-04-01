@@ -1,0 +1,48 @@
+package com.vehicleinteriorupgrade;
+
+public class FullyElectricalHeatedComfortSetats extends Seats {
+
+	private double price;
+	private String manufacturer = "Race Electro";
+
+	
+	@Override
+	protected double getPrice(String type) {
+		
+		// TODO Auto-generated method stub
+		if(type.equalsIgnoreCase("AVENTADOR SVJ COUPE")){
+			price = 402000.00;
+    	} else if(type.equalsIgnoreCase("AVENTADOR SVJ ROADSTER")){
+    		price = 403000.00;
+    	} else if(type.equalsIgnoreCase("AVENTADOR S ROADSTER")){
+    		price = 409000.00;
+    	} else if(type.equalsIgnoreCase("AVENTADOR S COUPE")){
+    		price = 408000.00;
+    	} else if(type.equalsIgnoreCase("HURACUN EVO SPYDER")){
+    		price = 307500.00;
+    	} else if(type.equalsIgnoreCase("HURACUN EVO")){
+    		price = 306000.00;
+    	} else if(type.equalsIgnoreCase("HURACUN COUPE")){
+    		price = 205000.00;
+    	} else if(type.equalsIgnoreCase("HURACUN SPYDER")){
+    		price = 205000.00;
+    	} else if(type.equalsIgnoreCase("HURACUN PERFOMANTE COUPE SPYDER")){
+    		price = 200200.00;
+    	} else if(type.equalsIgnoreCase("URUS")) {
+    		price = 509500.00;
+		} else {
+    		return 00.00;
+    	}
+		return price;
+		
+	}
+
+	
+
+	@Override
+	public String displayDetails(String type) {
+		// TODO Auto-generated method stub
+		return "Seats Type  :  FullyElectricalSeats \t"
+				+ "Manufacture  :  "+manufacturer+"  Cost : "+getPrice(type);
+	}
+}

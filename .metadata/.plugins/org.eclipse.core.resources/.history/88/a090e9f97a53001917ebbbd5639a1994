@@ -1,0 +1,15 @@
+package com.vehicleperformanceupgrade;
+
+public interface PerformanceHandlerInter {
+	
+	void displyPerformanceUpgradeDetails();
+	
+	double displyBrakeUpgrades(String type);
+	double displySecondaryColorUpgrades(String type);
+	double displySpecialTrimUpgrades(String type);
+	double displyFloormatsUpgrades(String type);
+	double displySteeringWheelUpgrades(String type);
+	double displySeatsUpgrades(String type);
+	
+	public String getDetails();
+}

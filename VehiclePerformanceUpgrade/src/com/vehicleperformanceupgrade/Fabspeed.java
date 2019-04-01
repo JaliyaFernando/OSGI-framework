@@ -1,0 +1,46 @@
+package com.vehicleperformanceupgrade;
+
+public class Fabspeed extends Exhausts {
+
+	private double price;
+	private String manufacturer = "Fabspeed";
+
+	
+	@Override
+	protected double getPrice(String type) {
+		
+		// TODO Auto-generated method stub
+		if(type.equalsIgnoreCase("AVENTADOR SVJ COUPE")){
+			price = 120200.00;
+    	} else if(type.equalsIgnoreCase("AVENTADOR SVJ ROADSTER")){
+    		price = 120300.00;
+    	} else if(type.equalsIgnoreCase("AVENTADOR S ROADSTER")){
+    		price = 110900.00;
+    	} else if(type.equalsIgnoreCase("AVENTADOR S COUPE")){
+    		price = 110800.00;
+    	} else if(type.equalsIgnoreCase("HURACUN EVO SPYDER")){
+    		price = 110750.00;
+    	} else if(type.equalsIgnoreCase("HURACUN EVO")){
+    		price = 110600.00;
+    	} else if(type.equalsIgnoreCase("HURACUN COUPE")){
+    		price = 110500.00;
+    	} else if(type.equalsIgnoreCase("HURACUN SPYDER")){
+    		price = 110500.00;
+    	} else if(type.equalsIgnoreCase("HURACUN PERFOMANTE COUPE SPYDER")){
+    		price = 120200.00;
+    	} else if(type.equalsIgnoreCase("URUS")) {
+    		price = 120950.00;
+		} else {
+    		return 00.00;
+    	}
+		return price;
+		
+	}	
+
+	@Override
+	public String displayDetails(String type) {
+		// TODO Auto-generated method stub
+		return "Exhausts Type  :  Fabspeed® X-Pipe Exhaust System\t"
+				+ "Manufacture  :  "+manufacturer+"  Cost : "+getPrice(type);
+	}
+}

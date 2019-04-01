@@ -1,0 +1,19 @@
+package com.vehicleinteriorupgrade;
+
+public abstract class Interior {
+	public void displyInteriorUpgradeDetails() {
+		System.out.println("     ***** Select Your Interior Upgrade *****     ");
+		System.out.println("------------------------------------------");
+		System.out.println("         Upgrade Type 1 - Color and Trim");
+		System.out.println("         Upgrade Type 2 - SPECIAL TRIM\r\n" + 
+				"");
+		System.out.println("         Upgrade Type 3 - FLOORMATS");
+		System.out.println("         Upgrade Type 4 - STEERING WHEEL");
+		System.out.println("         Upgrade Type 2 - Special Trim");
+		System.out.println("         Upgrade Type 3 - FLOORMATS");
+		System.out.println("------------------------------------------");
+	} 
+	
+	abstract double getPrice(String type);
+	abstract String displayDetails(String type);
+}

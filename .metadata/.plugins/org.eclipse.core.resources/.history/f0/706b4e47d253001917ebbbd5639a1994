@@ -1,0 +1,9 @@
+package com.vehicleperformanceupgrade;
+
+public abstract class Intake{
+
+	@Override
+	double getPrice(String type);
+	String displayDetails(String type);
+
+}

@@ -1,0 +1,25 @@
+package com.vehicleexteriorupgrade;
+
+public interface ExteriorHandlerInterface {
+	void ExteriorHandlerInterfaceImpl(String carType);
+	void selectExterior();
+	String getColor();
+	String getColorDetails(String color);
+	double getPaintColorCost(String paintColor);
+	String getRim();
+	String getRimDetails(String rimType);
+	double getRimCost(String rimType);
+	String getBrakeAndCaliper();
+	String getBrakeAndCaliperDetails(String type);
+	double getBrakeAndCaliperCost(String type);
+	String getTailpipes();
+	String getTailpipesDetails(String carType,String type);
+	double getTailpipesCost(String carType,String type);
+	
+//	String displayPaintColors();
+//	String getPaintDetails(String paintColor);
+//	double getPaintColorPrice(String color);
+//	String getRimAndColor();
+//	String getRimType(String type);
+//	double getRimCost(String type);
+}

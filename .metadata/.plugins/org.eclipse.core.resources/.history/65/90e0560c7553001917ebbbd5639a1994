@@ -1,0 +1,48 @@
+package com.vehicleinteriorupgrade;
+
+public class MultifunctionAlacantara extends SteeringWheel{
+
+	private double price;
+	private String manufacturer = "Lamoi Interior Designers";
+
+	
+	@Override
+	protected double getPrice(String type) {
+		
+		// TODO Auto-generated method stub
+		if(type.equalsIgnoreCase("AVENTADOR SVJ COUPE")){
+			price = 202000.00;
+    	} else if(type.equalsIgnoreCase("AVENTADOR SVJ ROADSTER")){
+    		price = 203000.00;
+    	} else if(type.equalsIgnoreCase("AVENTADOR S ROADSTER")){
+    		price = 109000.00;
+    	} else if(type.equalsIgnoreCase("AVENTADOR S COUPE")){
+    		price = 108000.00;
+    	} else if(type.equalsIgnoreCase("HURACUN EVO SPYDER")){
+    		price = 107500.00;
+    	} else if(type.equalsIgnoreCase("HURACUN EVO")){
+    		price = 106000.00;
+    	} else if(type.equalsIgnoreCase("HURACUN COUPE")){
+    		price = 105000.00;
+    	} else if(type.equalsIgnoreCase("HURACUN SPYDER")){
+    		price = 105000.00;
+    	} else if(type.equalsIgnoreCase("HURACUN PERFOMANTE COUPE SPYDER")){
+    		price = 200200.00;
+    	} else if(type.equalsIgnoreCase("URUS")) {
+    		price = 209500.00;
+		} else {
+    		return 00.00;
+    	}
+		return price;
+		
+	}
+
+	
+
+	@Override
+	public String displayDetails(String type) {
+		// TODO Auto-generated method stub
+		return "SteeringWheel type  :  Multifunction (Alacantara) \t\t\t"
+				+ "Manufacture  :  "+manufacturer+"  Cost : "+getPrice(type);
+	}
+}

@@ -1,0 +1,7 @@
+package com.vehicleinteriorupgrade;
+
+public abstract class Interior { 
+	public void displyInteriorUpgradeDetails();
+	abstract double getPrice(String type);
+	abstract String displayDetails(String type);
+}

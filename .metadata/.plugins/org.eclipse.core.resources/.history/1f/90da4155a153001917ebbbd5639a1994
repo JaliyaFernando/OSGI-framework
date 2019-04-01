@@ -1,0 +1,210 @@
+package com.vehicleperformanceupgrade;
+
+import java.util.Scanner;
+
+
+public class PerformanceHandlerImpl implements PerformanceHandlerInter {
+
+
+	int Brake_count = 0;
+	int Exhaust_count = 0;
+	int Suspension_count = 0;
+	int Intake_count = 0;
+	int FuelInjectors_count = 0;
+	
+	String Details="";
+	Scanner input = new Scanner(System.in); 
+	
+	@Override
+	public void displyPerformanceUpgradeDetails() {
+		System.out.println("\n                    ***** Select Your Interior Upgrade *****     ");
+		System.out.println("------------------------------------------------------------------------------");
+		System.out.print("         Upgrade Type 1 - Brake Upgrades");
+		if(Brake_count == 1) {System.out.print("\tYou already upgrade");}
+		System.out.print("\n         Upgrade Type 2 - Exhaust Upgrades");
+		if(Exhaust_count == 1) {System.out.print("\tYou already upgrade");}
+		System.out.print("\n         Upgrade Type 3 - SuspensionUpgrades");
+		if(Suspension_count == 1) {System.out.print("\tYou already upgrade");}
+		System.out.print("\n         Upgrade Type 4 - IntakeUpgrades");
+		if(Intake_count == 1) {System.out.print("\tYou already upgrade");}
+		System.out.print("\n         Upgrade Type 5 - FuelInjectorsUpgrades");
+		if(FuelInjectors_count == 1) {System.out.print("\tYou already upgrade");}
+		System.out.println("\n------------------------------------------------------------------------------");
+
+	}
+	
+	
+	Brakes lambo =new LamboPerformance();
+	Brakes brembo = new Brembo();
+	Brakes wilwood =new Wilwood();
+	@Override
+	public double displyBrakeUpgrades(String type) {
+		System.out.println("                        ***** Select Performance Brake Kit Upgrade *****     ");
+		System.out.println("---------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.print("         Upgrade Type 1 - "+lambo.displayDetails(type));
+		System.out.print("\n         Upgrade Type 2 - "+brembo.displayDetails(type));
+		System.out.print("\n         Upgrade Type 3 - "+wilwood.displayDetails(type));
+		System.out.println("\n---------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+
+		Brake_count++;
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				Details = Details+"\n"+lambo.displayDetails(type);
+				return lambo.getPrice(type);
+			}else if(a == 2){
+				Details = Details+"\n"+brembo.displayDetails(type);
+				return brembo.getPrice(type);
+			}else if(a == 3){
+				Details = Details+"\n"+wilwood.displayDetails(type);
+				return wilwood.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		return 00.00;
+
+	}
+	
+	Exhausts ak = new Akrapovic();
+	Exhausts fs = new Fabspeed();
+
+	@Override
+	public double displyExhaustUpgrades(String type) {
+		System.out.println("                        ***** Select Performance Exhaust Upgrade *****     ");
+		System.out.println("---------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.print("         Upgrade Type 1 - "+ak.displayDetails(type));
+		System.out.print("\n         Upgrade Type 2 - "+fs.displayDetails(type));
+		System.out.println("\n---------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+
+		Exhaust_count++;
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				Details = Details+"\n"+ak.displayDetails(type);
+				return ak.getPrice(type);
+			}else if(a == 2){
+				Details = Details+"\n"+fs.displayDetails(type);
+				return fs.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		return 00.00;
+	}
+
+	
+	Suspensions ks = new KontrolPro();
+	Suspensions v3 = new V3InoxLineCoilover();
+	@Override
+	public double displySuspensionUpgrades(String type) {
+		System.out.println("                        ***** Select Performance Suspension Upgrade *****     ");
+		System.out.println("---------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.print("         Upgrade Type 1 - "+ks.displayDetails(type));
+		System.out.print("\n         Upgrade Type 2 - "+v3.displayDetails(type));
+		System.out.println("\n---------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+
+		Suspension_count++;
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				Details = Details+"\n"+ks.displayDetails(type);
+				return ks.getPrice(type);
+			}else if(a == 2){
+				Details = Details+"\n"+v3.displayDetails(type);
+				return v3.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		return 00.00;
+	}
+
+	Intake ai = new Skunk2AirIntake();
+	@Override
+	public double displyIntakeUpgrades(String type) {
+		System.out.println("                        ***** Select Performance Air Intake Upgrade *****     ");
+		System.out.println("---------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.print("         Upgrade Type 1 - "+ai.displayDetails(type));
+		System.out.println("\n---------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+
+		Intake_count++;
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				Details = Details+"\n"+ai.displayDetails(type);
+				return ai.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		return 00.00;
+	}
+
+	FuelInjectorKit fk = new FuelInjectorKit();
+	@Override
+	public double displyFuelInjectorsUpgrades(String type) {
+		System.out.println("                        ***** Select Performance FuelInjector Upgrade *****     ");
+		System.out.println("---------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.print("         Upgrade Type 1 - "+fk.displayDetails(type));
+		System.out.println("\n---------------------------------------------------------------------------------------------------------------------");
+		
+		System.out.print("Enter Upgrade Type : ");
+		int a = input.nextInt();
+		
+		System.out.println("Are you sure, you want to upgrade ?(Yes : y , No : n)");
+		String select = input.next();
+
+		FuelInjectors_count++;
+		if(select.equalsIgnoreCase("y")) {
+			if(a == 1) {
+				Details = Details+"\n"+fk.displayDetails(type);
+				return fk.getPrice(type);
+			}else {
+				return 00.00;
+			}
+		}else if (select.equalsIgnoreCase("n")) {
+			return 00.00;
+		}
+		return 00.00;
+	}
+
+	@Override
+	public String getDetails() {
+		return Details;
+	}
+
+}

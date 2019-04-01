@@ -1,0 +1,9 @@
+package com.vehicleinteriorupgrade;
+
+public abstract class SpecialTrim extends Interior {
+
+	@Override
+	abstract double getPrice(String type);
+	abstract String displayDetails(String type);
+
+}

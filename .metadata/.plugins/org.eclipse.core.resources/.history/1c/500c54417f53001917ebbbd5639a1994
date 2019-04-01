@@ -1,0 +1,48 @@
+package com.vehicleperformanceupgrade;
+
+public class Wilwood extends Brakes {
+
+	private double price;
+	private String manufacturer = "Wilwood Pvt Ltd";
+
+	
+	@Override
+	protected double getPrice(String type) {
+		
+		// TODO Auto-generated method stub
+		if(type.equalsIgnoreCase("AVENTADOR SVJ COUPE")){
+			price = 20200.00;
+    	} else if(type.equalsIgnoreCase("AVENTADOR SVJ ROADSTER")){
+    		price = 20300.00;
+    	} else if(type.equalsIgnoreCase("AVENTADOR S ROADSTER")){
+    		price = 10900.00;
+    	} else if(type.equalsIgnoreCase("AVENTADOR S COUPE")){
+    		price = 10800.00;
+    	} else if(type.equalsIgnoreCase("HURACUN EVO SPYDER")){
+    		price = 10750.00;
+    	} else if(type.equalsIgnoreCase("HURACUN EVO")){
+    		price = 10600.00;
+    	} else if(type.equalsIgnoreCase("HURACUN COUPE")){
+    		price = 10500.00;
+    	} else if(type.equalsIgnoreCase("HURACUN SPYDER")){
+    		price = 10500.00;
+    	} else if(type.equalsIgnoreCase("HURACUN PERFOMANTE COUPE SPYDER")){
+    		price = 20200.00;
+    	} else if(type.equalsIgnoreCase("URUS")) {
+    		price = 20950.00;
+		} else {
+    		return 00.00;
+    	}
+		return price;
+		
+	}
+
+	
+
+	@Override
+	public String displayDetails(String type) {
+		// TODO Auto-generated method stub
+		return "Brakes Type  :  Midget GP320 Caliper Brake Kit more details on - https://www.carid.com/universal-performance-brake-kits/?vehicle=125460 \t"
+				+ "Manufacture  :  "+manufacturer+"  Cost : "+getPrice(type);
+	}
+}

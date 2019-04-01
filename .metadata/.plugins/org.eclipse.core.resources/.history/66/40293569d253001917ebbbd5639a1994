@@ -1,0 +1,17 @@
+package com.vehicleperformanceupgrade;
+
+public class Suspensions extends Performance {
+
+	@Override
+	double getPrice(String type) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	String displayDetails(String type) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
